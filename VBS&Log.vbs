@@ -24,6 +24,7 @@ Class SystemLog
     
     Public Function  WriteLog(strLog)
     	Const ForReading=1,ForWriting=2,ForAppending=8
+	'Get current file path
     	currentPath=createobject("Scripting.FileSystemObject").GetFile(Wscript.ScriptFullName).ParentFolder.Path    	MsgBox "3"
     	currentPath=currentPath&"\SystemLog.log"
     	strLog=FormatDateTime(now,0)&"     "&strLog
